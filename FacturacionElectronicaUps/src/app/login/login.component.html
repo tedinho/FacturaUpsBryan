@@ -1,0 +1,25 @@
+<form>
+    <br /><br /><br /><br /> <br />
+    <br /><br /><br /><br /> <br />
+    <div class="w3-display-container">
+      <div class="w3-display-middle">
+        <div class="w3-card w3-container" style="min-width: 500px;">
+          <div *ngIf="mensajeError" id="error">
+            <p>{{ mensajeError }}</p>
+          </div>
+          <br />
+          <p>Nombre Usuario:</p>
+          <input type=" text" class="w3-input w3-border w3-round-large" id="Nombre" name="nombre"
+            [(ngModel)]="usuario.nombre" [ngModelOptions]="{standalone: true}" required #nombre="ngModel" minlength="7" />
+          <p>Contraseña:</p>
+          <input type="password" class="w3-input w3-border w3-round-large" id="claveTransient" name="claveTransient"
+            [(ngModel)]="usuario.claveTransient" [ngModelOptions]="{standalone: true}" required #nombre="ngModel"
+            minlength="7" />
+          <br />
+          <button type="button" class="boton-guardar w3-btn w3-round" (click)="validar();">Guardar</button>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+  </form>
