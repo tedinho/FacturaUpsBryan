@@ -1,0 +1,32 @@
+-- INSTALAR LARAVEL..!!
+composer create-project --prefer-dist laravel/laravel ServiciosFactura
+
+-- Clave postgres
+f4ctur4c10n.ups
+
+-- usuario postgres
+CREATE ROLE postgres LOGIN
+  ENCRYPTED PASSWORD 'md53175bce1d3201d16594cebf9d7eb3f9d'
+  SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;
+
+-- base postgres
+CREATE DATABASE factura_ups
+  WITH OWNER = "facturaUps"
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'es_EC.UTF-8'
+       LC_CTYPE = 'es_EC.UTF-8'
+       CONNECTION LIMIT = -1;
+
+
+--comandos angular
+
+ crear componente:
+ng generate component Home
+
+crear servicio:
+ng generate service player
+
+PARA QUE VALGA EL HTTP: npm install @angular/http@latest
+
+
